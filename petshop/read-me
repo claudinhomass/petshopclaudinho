@@ -1,0 +1,53 @@
+Configurar banco de dados:
+
+1 - Ao abrir o dbvear, busque criar uma conexão local usando MySQL
+
+2 - O serve Host precisa ser localhost e a porta 3306
+
+3 - O nome do banco de dados precisa ser 'petshop'
+
+4 - O usuário precisa ser 'root' e a senha 'root'
+
+5 - APós isso, caso queira inserir alguns dados via script, você precisará usar os seguintes comandos:
+
+CREATE DATABASE petshop - //Aqui você cria o banco 
+
+USE petshop - //Aqui vocÊ indica qual basa de dados vai usar
+
+O comando abaixo é paracriar uma tabela com todos os campos necessários, com chave primaria e cada tipo de atributo e suas parametrizações.
+CREATE table cadastros (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	name_animal VARCHAR(100) NOT NULL,
+	age INT(100) NOT NULL,
+	type CHAR(9) NOT NULL,
+	race VARCHAR(100),
+	name_people VARCHAR(100) NOT NULL,
+	telephone VARCHAR(15) NOT NULL,
+	address VARCHAR(100) NOT NULL);
+
+
+
+Abaixo está os comandos para já popular alguns dados.
+
+INSERT INTO cadastros(name_animal, age, type, race, name_people, telephone, address) VALUES('mel', 4, 'cachorro', 'vira lata', 'Leonardo Vinci', '48984258569', 'Rua jacó manto, 3219');
+INSERT INTO cadastros(name_animal, age, type, race, name_people, telephone, address) VALUES('preta', 4, 'cachorro', 'Vira lata', 'Joana Andrade', '48984256325', 'Rua machado rodolfo, 440');
+INSERT INTO cadastros(name_animal, age, type, race, name_people, telephone, address) VALUES('Dalm', 4, 'cachorro', 'Pastor alemão', 'Pedro Macedo', '48984255226', 'Rua Nova Era, 320');
+INSERT INTO cadastros(name_animal, age, type, race, name_people, telephone, address) VALUES('Shin', 4, 'cachorro', 'Pastor alemão', 'joao Marcos', '48845232654', 'Rua Meirelis, 532');
+
+
+Configurar backend:
+
+1 - Clonar o projeto do repositório x
+
+2 - Ao abrir o intellij, basta abrir um novo projeto e selecionar a pasta que está os arquivos que foram clonados
+
+3 - Ao lado direito superior basta procurar o icone M que representa o maven, ao abrir a nova aba procure por reload
+
+4 - E para iniciar o projeto, basta procurar o PetShopApplication.java 
+
+
+Para usar o postman, nas requisições:
+
+1 - Abrir o postman, localizar a pasta CRUD.postman_collection.json e importar
+
+2 - É possível usar o get, put, create e por fim, remove
